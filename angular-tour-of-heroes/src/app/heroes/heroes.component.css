@@ -1,3 +1,13 @@
-p {
-    color: orange
+div {
+    background-color: cadetblue;
+}
+ul {
+    background-color: aliceblue;
+
+}
+li {
+    color: blue;
+}
+span {
+    color: navy;
 }
