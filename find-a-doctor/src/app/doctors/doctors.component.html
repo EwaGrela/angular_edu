@@ -1,0 +1,11 @@
+<h2>{{doctor.name | uppercase}}</h2>
+<div class="container">
+    <div>
+        <label for="">
+            <input type="text"[(ngModel)]="doctor.name">
+        </label>
+    </div>
+    <h3>Details: {{doctor.name}}</h3>
+    <div>{{doctor.id}}</div>
+    <div>{{doctor.specialty}}</div>
+</div>
