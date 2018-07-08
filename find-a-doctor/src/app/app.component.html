@@ -3,12 +3,16 @@
   <h1>
     Welcome to {{ title }}!
   </h1>
+  <nav>
+  <a routerLink="/doctors">Doctors</a>
+  <a routerLink="/dashboard">Dashboard</a>
+</nav>
   <div class="jumbotron">
-    <img width="300" alt="laska eskulapa" src="https://m.ocdn.eu/_m/dd8df2a2a4831f3a4291617837eea901,62,37.jpg">
+    <img width="150" alt="laska eskulapa" src="https://m.ocdn.eu/_m/dd8df2a2a4831f3a4291617837eea901,62,37.jpg">
   </div>
   <div class="cointainer">
-    
-    <app-doctors></app-doctors>
+    <router-outlet></router-outlet>
+    <app-messages></app-messages>
   
   </div>
 </div>
