@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {Doctor} from './doctor';
 import {DOCTORS} from './mock-doctors';
 import { Observable, of } from 'rxjs';
-import {MessageService} from './message.service';
+import { MessageService } from './message.service';
 @Injectable({
   providedIn: 'root'
 })
