@@ -1,8 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
-import {Doctor} from '../doctor'
-import { DoctorService }  from '../doctor.service';
+import {Doctor} from '../doctor';
+import { DoctorService } from '../doctor.service';
 
 @Component({
   selector: 'app-doctor-detail',
@@ -28,8 +28,8 @@ export class DoctorDetailComponent implements OnInit {
       .subscribe(doctor => this.doctor = doctor);
   }
 
-  goBack() :void {
-    this.location.back()
+  goBack(): void {
+    this.location.back();
   }
 
 }
