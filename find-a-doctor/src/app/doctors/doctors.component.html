@@ -1,20 +1,20 @@
 
 <div class="container">
-    <app-doctor-detail [doctor]="selectedDoctor"></app-doctor-detail>
+
     <h2>Doctors</h2>
     <ul class="doctors">
-        <li *ngFor="let doctor of doctors"
-            [class.selected]="doctor === selectedDoctor"
-            (click) ="onSelect(doctor)">
-            <span class="badge">{{doctor.id}}</span>
-            {{doctor.name}}
+        <li *ngFor="let doctor of doctors">
+            <a routerLink="detail/{{doctor.id}}">
+                <span class="badge">{{doctor.id}}</span>
+                {{doctor.name}}
+            </a>
+
         </li>
     </ul>
-    
+
 
 </div>
 
 
-    
-     
-    
+
+

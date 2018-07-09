@@ -1,5 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 import {Doctor} from '../doctor'
+import { DoctorService }  from '../doctor.service';
 
 @Component({
   selector: 'app-doctor-detail',
@@ -8,9 +11,25 @@ import {Doctor} from '../doctor'
 })
 export class DoctorDetailComponent implements OnInit {
  @Input() doctor: Doctor;
-  constructor() { }
+  constructor(
+  private route: ActivatedRoute,
+  private doctorService: DoctorService,
+  private location: Location
+  ) { }
 
-  ngOnInit() {
+
+  ngOnInit(): void {
+    this.getDoctor();
+  }
+
+  getDoctor(): void {
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.doctorService.getDoctor(id)
+      .subscribe(doctor => this.doctor = doctor);
+  }
+
+  goBack() :void {
+    this.location.back()
   }
 
 }

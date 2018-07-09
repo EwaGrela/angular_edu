@@ -9,7 +9,6 @@ import {DoctorService} from '../doctor.service'
 })
 export class DoctorsComponent implements OnInit {
 
-  selectedDoctor: Doctor;
   doctors: Doctor[];
 
 
@@ -19,16 +18,14 @@ export class DoctorsComponent implements OnInit {
     this.getDoctors()
   }
 
-  onSelect(doctor: Doctor): void {
-    this.selectedDoctor = doctor;
-    
-  }
-  
 
   getDoctors(): void {
     this.doctorService.getDoctors()
       .subscribe(doctors => this.doctors = doctors);
   }
 }
+
+
+
 
 

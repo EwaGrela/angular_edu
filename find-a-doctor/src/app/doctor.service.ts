@@ -14,4 +14,10 @@ export class DoctorService {
     this.messageService.add("The doctors were fetched!")
     return of(DOCTORS)
   }
+  getDoctor(id: number): Observable<Doctor>{
+    this.messageService.add(`Fetched a doctor with id= ${id}`);
+    return of(DOCTORS.find(doctor => doctor.id === id));
+  }
+
 }
+
