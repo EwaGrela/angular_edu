@@ -40,7 +40,7 @@ export class DoctorService {
 
   }
   /** GET doctor by id. Will 404 if id not found */
-getDoctor(id: number): Observable<Hero> {
+getDoctor(id: number): Observable<Doctor> {
   const url = `${this.doctorsUrl}/${id}`;
   return this.http.get<Doctor>(url).pipe(
     tap(_ => this.log(`fetched doctor id=${id}`)),
